@@ -16,6 +16,6 @@ lynkctl generate ./firmware --evidence --reproducible \
   -o firmware.cdx.json 2>firmware.diagnostics.txt
 ```
 
-For stable comparisons, pin the source and submodules, generator version, selected target/configuration, timestamp, toolchain, enrichment database, and build artifacts. Absolute evidence paths may affect output across checkout locations: our byte-identity check repeats the command in the same checkout. It is not a claim of path-independent reproducibility.
+For stable comparisons, pin the source and submodules, generator version, selected target/configuration, timestamp, toolchain, enrichment database, and build artifacts. Absolute evidence paths may affect output across checkout locations; repeat the command in the same checkout when testing byte stability.
 
-The public examples disable OSS-index matching and OS package lookup so results do not depend on a locally cached index or host package database. This reduces available enrichment; evaluate full enrichment separately. Their explicit timestamp is a reproduction parameter, not a firmware build date.
+Disabling OSS-index matching and OS package lookup reduces dependence on cached databases and host packages, but also reduces available enrichment. Evaluate full enrichment separately. An explicit timestamp is a reproduction parameter, not proof of a firmware build date.
