@@ -53,4 +53,4 @@ Keep referenced generated-build metadata and source paths available. Use `--ccs-
 - `--no-oss-index`: disable vendored OSS-index matching.
 - `--strict`: fail on warnings as well as errors.
 
-Use build outputs from the same configuration and revision as the inspected metadata. See the [public examples](../examples/sboms/README.md) for a reproducible metadata-only run.
+Use build outputs from the same configuration and revision as the inspected metadata.

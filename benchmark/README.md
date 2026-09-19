@@ -1,10 +1,10 @@
 # Embedded firmware SBOM benchmark
 
-This directory holds the benchmark protocol. **No comparative benchmark results are published yet.** The two [example SBOMs](../examples/sboms/README.md) establish reproducible inputs and output inspection, not accuracy or performance rankings.
+This directory holds the benchmark protocol. **No comparative benchmark results are published yet.** The benchmark corpus has not been published.
 
 ## Corpus and ground truth
 
-Start with the pinned FreeRTOS configurations in the example provenance files. Expand across independent public firmware projects, MCU families, and build providers before making broad claims. For every case, record the upstream URL, commit, submodule revisions, license references, exact target/configuration, prerequisites, compiler/linker versions, and artifact/map hashes.
+Select independently reviewed public firmware projects spanning MCU families and build providers before making broad claims. For every case, record the upstream URL, commit, submodule revisions, license references, exact target/configuration, prerequisites, compiler/linker versions, and artifact/map hashes.
 
 Create a manually reviewed expected-component inventory from the selected build and source evidence. Record expected name, version, license, inclusion/scope, supporting file and lines, and uncertainty. Source-tree presence alone is not proof of shipment. Review ground truth independently of any generator's output.
 
