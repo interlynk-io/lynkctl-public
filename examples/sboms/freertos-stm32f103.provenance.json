@@ -1,0 +1,43 @@
+{
+  "source_repository": "https://github.com/FreeRTOS/FreeRTOS",
+  "source_revision": "f4fcc3b228643144727e9257ba12db1cb632b6e6",
+  "kernel_repository": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+  "kernel_revision": "3a22924e0a9ddbbc8b0758881c33b3422a5cc20d",
+  "project": "FreeRTOS/Demo/CORTEX_STM32F103_IAR/RTOSDemo.ewp",
+  "configuration": "Debug",
+  "generator": {
+    "version": "v0.3.6",
+    "commit": "aa9ab2b3321ea59dcebf292684bfe246dfff0580",
+    "buildDate": "2026-09-13T23:35:14Z",
+    "platform": "linux/amd64",
+    "copyright": "Copyright 2026 Interlynk.io",
+    "license": "Interlynk SOFTWARE LICENSE AGREEMENT FOR lynkctl",
+    "support": "support@interlynk.io"
+  },
+  "command": [
+    "lynkctl",
+    "generate",
+    "FreeRTOS/Demo/CORTEX_STM32F103_IAR/RTOSDemo.ewp",
+    "--provider",
+    "iar",
+    "--iar-config",
+    "Debug",
+    "--project-root",
+    ".",
+    "--no-oss-index",
+    "--disable-os-enrichment",
+    "--no-map",
+    "--include-source-files",
+    "--exclude-header-files",
+    "--evidence",
+    "--reproducible",
+    "--timestamp",
+    "2026-09-19T00:00:00Z",
+    "-v"
+  ],
+  "working_directory": "FreeRTOS checkout root",
+  "exit_code": 0,
+  "sbom_sha256": "bbf9a859bac1a515f78c2f905d79930d30b18d26c9d3062554301e6a108eefe2",
+  "mode": "build metadata; no compiler run, linker map, or OSS-index matching",
+  "repeat_byte_identical": true
+}

@@ -1,0 +1,3219 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:f2fad010-3b2c-5c17-97a0-e3c0c548fc92",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-19T00:00:00Z",
+    "lifecycles": [
+      {
+        "phase": "post-build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "bom-ref": "tool:lynkctl",
+          "type": "application",
+          "supplier": {
+            "name": "Interlynk Inc",
+            "url": [
+              "https://www.interlynk.io"
+            ]
+          },
+          "name": "lynkctl",
+          "version": "v0.3.6",
+          "externalReferences": [
+            {
+              "url": "https://github.com/interlynk-io/lynkctl",
+              "type": "vcs"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "0174afe52971d0e6",
+      "type": "firmware",
+      "name": "RTOSDemo",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "executable"
+        },
+        {
+          "name": "interlynk:build:configuration",
+          "value": "Debug"
+        },
+        {
+          "name": "interlynk:build:endian",
+          "value": "little"
+        },
+        {
+          "name": "interlynk:build:optimization_level",
+          "value": "Low (1)"
+        },
+        {
+          "name": "interlynk:build:output_format",
+          "value": "ELF"
+        },
+        {
+          "name": "interlynk:build:system",
+          "value": "iar"
+        },
+        {
+          "name": "interlynk:build:toolchain",
+          "value": "IAR ICCARM/ILINK"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 1,
+                "value": "RTOSDemo"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": ".ewp project filename"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c"
+          }
+        ]
+      }
+    },
+    "properties": [
+      {
+        "name": "cdx:reproducible",
+        "value": "true"
+      }
+    ]
+  },
+  "components": [
+    {
+      "bom-ref": "0aed67ece526497e",
+      "type": "file",
+      "name": "main.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a771a7e62e0fa75530ad534a1a53e9bad3badb8cc02ffff0da4e51535fc81292"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "main.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "main.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:a771a7e62e0fa75530ad534a1a53e9bad3badb8cc02ffff0da4e51535fc81292"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "main.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "1614a3bb102c7b26",
+      "type": "file",
+      "name": "stm32f10x_vector.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8ac9243165821ca0970c5b5654537ac9f7f6f276c1e723b1b83b2ced9f60cec8"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_vector.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "stm32f10x_vector.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:8ac9243165821ca0970c5b5654537ac9f7f6f276c1e723b1b83b2ced9f60cec8"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "stm32f10x_vector.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "19ae89e692c4de76",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_gpio.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "13940abe7113942f76313770cd2bfa4911a4fedc4bc60618b14988f922c7bf58"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_gpio.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_gpio.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:13940abe7113942f76313770cd2bfa4911a4fedc4bc60618b14988f922c7bf58"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_gpio.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "2447f2f6d26d3798",
+      "type": "file",
+      "name": "../Common/Minimal/semtest.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "43d350207c5b66c7a98eda9440f27201f453783dbc675bf922e5e3ad153a11bf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "semtest.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/semtest.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:43d350207c5b66c7a98eda9440f27201f453783dbc675bf922e5e3ad153a11bf"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/semtest.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "2e87f905453674ff",
+      "type": "file",
+      "name": "../Common/Minimal/blocktim.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b57805c984fe86676064f96d0ef2d755f58d2570bac34e80af5cc87258a2dfad"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "blocktim.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/blocktim.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:b57805c984fe86676064f96d0ef2d755f58d2570bac34e80af5cc87258a2dfad"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/blocktim.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "30f20bcf0d8a1267",
+      "type": "file",
+      "name": "../Common/Minimal/BlockQ.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8c4500ebfc76818ec825aa30223e3bd28c2ba9061e320a5158736448e692bdd6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "BlockQ.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/BlockQ.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:8c4500ebfc76818ec825aa30223e3bd28c2ba9061e320a5158736448e692bdd6"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/BlockQ.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "3b9821805c359e65",
+      "type": "device",
+      "supplier": {
+        "name": "STMicroelectronics",
+        "url": [
+          "https://www.st.com"
+        ]
+      },
+      "name": "Generic Arm Core",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "cdx:device:function",
+          "value": "microcontroller"
+        },
+        {
+          "name": "interlynk:hardware:device_evidence",
+          "value": "{\"declared\":\"STM32F103ZG\",\"source\":\".ewp OGChipSelectEditMenu\",\"observed\":[{\"Vendor\":\"STMicroelectronics\",\"Family\":\"STM32F1\",\"Part\":\"STM32F10XFWLIB\",\"Board\":\"\",\"Source\":\"$PROJ_DIR$\\\\STM32F10xFWLib\\\\inc\",\"Kind\":\"include-path\",\"Strength\":1},{\"Vendor\":\"STMicroelectronics\",\"Family\":\"STM32F1\",\"Part\":\"STM32F10X\",\"Board\":\"\",\"Source\":\"$PROJ_DIR$\\\\STM32F10x_FLASH.icf\",\"Kind\":\"linker-script\",\"Strength\":1}]}"
+        },
+        {
+          "name": "interlynk:hardware:device_selection_status",
+          "value": "conflicting"
+        },
+        {
+          "name": "interlynk:hardware:mcu_family",
+          "value": "STM32F1"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": ".ewp OGChipSelectEditMenu"
+          },
+          {
+            "location": "$PROJ_DIR$\\STM32F10xFWLib\\inc"
+          },
+          {
+            "location": "$PROJ_DIR$\\STM32F10x_FLASH.icf"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "41dbe4af71d0cc8c",
+      "type": "file",
+      "name": "../Common/Minimal/death.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e3a69a226805ac2be7e9d5a9ac48396391d6d89c92310b170732ba12a78c77c1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "death.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/death.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:e3a69a226805ac2be7e9d5a9ac48396391d6d89c92310b170732ba12a78c77c1"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/death.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "54d4a55c1e58298e",
+      "type": "application",
+      "supplier": {
+        "name": "IAR Systems",
+        "url": [
+          "https://www.iar.com"
+        ]
+      },
+      "manufacturer": {
+        "name": "IAR Systems",
+        "url": [
+          "https://www.iar.com"
+        ]
+      },
+      "name": "IAR Embedded Workbench for Arm",
+      "version": "7.60.1.11206",
+      "scope": "excluded",
+      "purl": "pkg:generic/iar-ewarm@7.60.1.11206",
+      "externalReferences": [
+        {
+          "url": "https://www.iar.com/ewarm",
+          "type": "website"
+        }
+      ],
+      "properties": [
+        {
+          "name": "interlynk:build:version_source",
+          "value": "project-saved-by"
+        },
+        {
+          "name": "interlynk:iar:project_saved_by_version",
+          "value": "7.60.1.11206"
+        },
+        {
+          "name": "lynkctl:install_method",
+          "value": "precompiled"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "instrumentation",
+                "confidence": 1,
+                "value": "IAR Embedded Workbench for Arm"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.8,
+            "methods": [
+              {
+                "technique": "instrumentation",
+                "confidence": 0.8,
+                "value": "7.60.1.11206"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": ".ewp toolchain name"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "5e37e5761cd4c9fe",
+      "type": "file",
+      "name": "timertest.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "139710874ca5871b47340e94ae18746620e0a1c11963ae29ea418f169adb858b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "timertest.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "timertest.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:139710874ca5871b47340e94ae18746620e0a1c11963ae29ea418f169adb858b"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "timertest.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "62ff5e6b2208e159",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/cortexm3_macro.s",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "da7eaf3f645c55d77c78f6967b4bd660c110102df38cc4c44532c354b4a3a08c"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "cortexm3_macro.s"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/cortexm3_macro.s"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:da7eaf3f645c55d77c78f6967b4bd660c110102df38cc4c44532c354b4a3a08c"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/cortexm3_macro.s"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "69677179d2addfa3",
+      "type": "file",
+      "name": "../../Source/queue.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31e5ce0890906b7eaac466007c8810fbfe248d22f667a3c620c3f18e9fc0fcc3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "queue.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/queue.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:31e5ce0890906b7eaac466007c8810fbfe248d22f667a3c620c3f18e9fc0fcc3"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/queue.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "76bf7dc3da648947",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_systick.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3f6bd4911f375ba13d70e770656e6c490ec5a37838ada0965ab07736bad2d1e5"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_systick.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_systick.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:3f6bd4911f375ba13d70e770656e6c490ec5a37838ada0965ab07736bad2d1e5"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_systick.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "77c78600cedcd88d",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_tim.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "37a735c7d84cc340ee35031e70f33469ef47b319278210f31ae00f15d426c6d3"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_tim.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_tim.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:37a735c7d84cc340ee35031e70f33469ef47b319278210f31ae00f15d426c6d3"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_tim.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "8b23aefaf4013e7e",
+      "type": "file",
+      "name": "../../Source/portable/IAR/ARM_CM3/portasm.s",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bf8437c7c8bc594ee68d5ddae603c64bec28299c49e2e3470618691f859b27bd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "portasm.s"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/portable/IAR/ARM_CM3/portasm.s"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:bf8437c7c8bc594ee68d5ddae603c64bec28299c49e2e3470618691f859b27bd"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/portable/IAR/ARM_CM3/portasm.s"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "964a3e5031caa220",
+      "type": "file",
+      "name": "../../Source/tasks.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ae8bcc9dd0b30d39bf37eb36f1ef3067d086906b2f92ca2aea1acc0f0ad31645"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates; 2026 Arm Limited and/or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "tasks.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/tasks.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:ae8bcc9dd0b30d39bf37eb36f1ef3067d086906b2f92ca2aea1acc0f0ad31645"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/tasks.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          },
+          {
+            "text": "2026 Arm Limited and/or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "a0568ce348356de2",
+      "type": "file",
+      "name": "ParTest/ParTest.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6727c05e4bf42e3d04e16ec6f8bc20a218baae9868aed961e156c065c9ec085d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "ParTest.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "ParTest/ParTest.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:6727c05e4bf42e3d04e16ec6f8bc20a218baae9868aed961e156c065c9ec085d"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "ParTest/ParTest.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "a6c91140cd96fd14",
+      "type": "file",
+      "name": "spi_flash.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "83e1155c071a4d794cde52bc4b071922c2cdb242607c5ee599826127188ea6a2"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "spi_flash.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "spi_flash.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:83e1155c071a4d794cde52bc4b071922c2cdb242607c5ee599826127188ea6a2"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "spi_flash.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "a91d0938d990aa74",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_spi.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "307d47217f987514875ecd646aec2ac65b1eec5205138fed5c9735f1d061b366"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_spi.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_spi.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:307d47217f987514875ecd646aec2ac65b1eec5205138fed5c9735f1d061b366"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_spi.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "abccda0f04b211b4",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_rcc.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b5b9965d7e83da9544fec89042b2fbd1ec29918c87d2b2874bcb959314b5c165"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_rcc.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_rcc.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:b5b9965d7e83da9544fec89042b2fbd1ec29918c87d2b2874bcb959314b5c165"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_rcc.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "ac4491c88038a7ae",
+      "type": "framework",
+      "supplier": {
+        "name": "Amazon.com, Inc. or its affiliates."
+      },
+      "name": "FreeRTOS-Kernel",
+      "version": "11.3.1",
+      "scope": "excluded",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "copyright": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER; Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.; Copyright 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>; Copyright 2026 Arm Limited and/or its affiliates <open-source-office@arm.com>; The above copyright notice and this permission notice shall be included in all",
+      "purl": "pkg:generic/freertos-kernel@11.3.1",
+      "properties": [
+        {
+          "name": "interlynk:freertos:kernel_version",
+          "value": "11.3.1"
+        },
+        {
+          "name": "interlynk:freertos:source_versions",
+          "value": "11.3.1"
+        },
+        {
+          "name": "interlynk:freertos:usage",
+          "value": "selected-source"
+        },
+        {
+          "name": "interlynk:freertos:version_declarations",
+          "value": "#define tskKERNEL_VERSION_MAJOR                       11\n#define tskKERNEL_VERSION_MINOR                       3\n#define tskKERNEL_VERSION_BUILD                       1 | #define tskKERNEL_VERSION_NUMBER                      \"V11.3.1\""
+        },
+        {
+          "name": "interlynk:freertos:version_status",
+          "value": "resolved"
+        },
+        {
+          "name": "lynkctl:install_method",
+          "value": "submodule"
+        },
+        {
+          "name": "lynkctl:submodule:commit",
+          "value": "3a22924e0a9ddbbc8b0758881c33b3422a5cc20d"
+        },
+        {
+          "name": "lynkctl:submodule:path",
+          "value": "FreeRTOS/Source"
+        },
+        {
+          "name": "lynkctl:submodule:url",
+          "value": "https://github.com/FreeRTOS/FreeRTOS-Kernel"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "name",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "FreeRTOS-Kernel"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.85,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.85,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.85,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.85,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.85,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.85,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.85,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.85,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.85,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.85,
+                "value": "11.3.1"
+              }
+            ]
+          },
+          {
+            "field": "purl",
+            "confidence": 0.95,
+            "methods": [
+              {
+                "technique": "source-code-analysis",
+                "confidence": 0.95,
+                "value": "pkg:generic/freertos-kernel@11.3.1"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_2.c"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 57
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 58
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h",
+            "line": 2
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 2
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c",
+            "line": 2
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c",
+            "line": 2
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 2
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h"
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/FreeRTOS.h",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 4
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 15
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/include/task.h",
+            "line": 21
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/list.c",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/port.c",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/IAR/ARM_CM3/portasm.s",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_2.c",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_2.c",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_2.c",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_2.c",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c",
+            "line": 14
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/queue.c",
+            "line": 20
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 1
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 3
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 4
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 15
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source/tasks.c",
+            "line": 21
+          },
+          {
+            "location": "/tmp/lynkctl-public-sources/FreeRTOS/FreeRTOS/Source"
+          },
+          {
+            "location": ".gitmodules"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "Copyright 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>"
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          },
+          {
+            "text": "Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved."
+          },
+          {
+            "text": "Copyright 2026 Arm Limited and/or its affiliates <open-source-office@arm.com>"
+          },
+          {
+            "text": "The above copyright notice and this permission notice shall be included in all"
+          },
+          {
+            "text": "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "b205c5e3cb251347",
+      "type": "file",
+      "name": "../../Source/portable/IAR/ARM_CM3/port.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "04d6280ee6fe1d8700ac1586c0333fba5a1be75a9a910efcfc4d3293189420e0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "port.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/portable/IAR/ARM_CM3/port.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:04d6280ee6fe1d8700ac1586c0333fba5a1be75a9a910efcfc4d3293189420e0"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/portable/IAR/ARM_CM3/port.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "b2a4af2ce5d2a178",
+      "type": "file",
+      "name": "stm32f10x_it.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6f3827b29221ace4001b9c6ba12cd2dc415813631470d41ceb45f42ac0d0330b"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_it.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "stm32f10x_it.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:6f3827b29221ace4001b9c6ba12cd2dc415813631470d41ceb45f42ac0d0330b"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "stm32f10x_it.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "bed6d22eb989e060",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_lib.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "357ded329c192d708a51e6efd8f1621a435be9c7ba5a498b0154e352a964cd26"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_lib.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_lib.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:357ded329c192d708a51e6efd8f1621a435be9c7ba5a498b0154e352a964cd26"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_lib.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "c6ff40e4bd1ad0fb",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/lcd.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "aacd4630422caf580e820408749ab34ef0ea6f0134e5f1e39b52ba5fcfaadbd4"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "lcd.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/lcd.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:aacd4630422caf580e820408749ab34ef0ea6f0134e5f1e39b52ba5fcfaadbd4"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/lcd.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "cfbebeeecd6cbfe8",
+      "type": "file",
+      "name": "../../Source/portable/MemMang/heap_2.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a1a5362ff7e0f3f32fa196d5f021c9469f7358f5ba96f45354d8fa2f6b6179ac"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "heap_2.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/portable/MemMang/heap_2.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:a1a5362ff7e0f3f32fa196d5f021c9469f7358f5ba96f45354d8fa2f6b6179ac"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/portable/MemMang/heap_2.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "d970699fdb2f993b",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_usart.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1a45aa69602b4829063aaad74302e5c66d2432c172504d9783d3bb4d9307df07"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_usart.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_usart.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:1a45aa69602b4829063aaad74302e5c66d2432c172504d9783d3bb4d9307df07"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_usart.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "dbb7cf511eadb7be",
+      "type": "file",
+      "name": "../Common/Minimal/flash.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "079a7e599f9d44024afb94ac8a54313fd33afb9d096af49dcc0856d857e8420e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "flash.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/flash.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:079a7e599f9d44024afb94ac8a54313fd33afb9d096af49dcc0856d857e8420e"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/flash.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "de9b7e26315dc020",
+      "type": "file",
+      "name": "../../Source/list.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "182fefbf019d8d804ba287dc6a2ee4755b9895898ea7aae7fa41f0154c83c677"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2021 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "list.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../../Source/list.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:182fefbf019d8d804ba287dc6a2ee4755b9895898ea7aae7fa41f0154c83c677"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../../Source/list.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2021 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "df1f4d9f67d52628",
+      "type": "file",
+      "name": "../Common/Minimal/integer.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "190c32fba88b5cd49ad4463d4ec4533039667587b53175c37e8367e8cbcfc32b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "integer.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/integer.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:190c32fba88b5cd49ad4463d4ec4533039667587b53175c37e8367e8cbcfc32b"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/integer.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "dfb0474706df3c7b",
+      "type": "file",
+      "name": "../Common/Minimal/PollQ.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2a14122ac31985ea936022af4978f5229b3e75ed285933a3fd8fab0f67b1d265"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "PollQ.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/PollQ.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:2a14122ac31985ea936022af4978f5229b3e75ed285933a3fd8fab0f67b1d265"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/PollQ.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "e18d6d1ae58ff30f",
+      "type": "file",
+      "name": "STM32F10xFWLib/src/stm32f10x_nvic.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0351eb72ab485d9ccbf345c8ceff0ee8bcf20f21b9d0ff5ad6618adc57bc5be9"
+        }
+      ],
+      "copyright": "2007 STMicroelectronics",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "stm32f10x_nvic.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "STM32F10xFWLib/src/stm32f10x_nvic.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:0351eb72ab485d9ccbf345c8ceff0ee8bcf20f21b9d0ff5ad6618adc57bc5be9"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "STM32F10xFWLib/src/stm32f10x_nvic.c"
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2007 STMicroelectronics"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "e72cf977a38307e1",
+      "type": "library",
+      "supplier": {
+        "name": "IAR Systems",
+        "url": [
+          "https://www.iar.com"
+        ]
+      },
+      "manufacturer": {
+        "name": "IAR Systems",
+        "url": [
+          "https://www.iar.com"
+        ]
+      },
+      "name": "DLib",
+      "version": "7.60.1.11206",
+      "scope": "optional",
+      "licenses": [
+        {
+          "expression": "LicenseRef-IAR-Proprietary",
+          "acknowledgement": "concluded"
+        }
+      ],
+      "purl": "pkg:generic/iar-dlib@7.60.1.11206",
+      "properties": [
+        {
+          "name": "interlynk:iar:project_saved_by_version",
+          "value": "7.60.1.11206"
+        },
+        {
+          "name": "interlynk:iar:runtime_version_status",
+          "value": "inferred"
+        },
+        {
+          "name": "interlynk:iar:version_basis",
+          "value": "project-saved-by default"
+        },
+        {
+          "name": "lynkctl:install_method",
+          "value": "precompiled"
+        },
+        {
+          "name": "lynkctl:link_type",
+          "value": "static"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 0.9,
+            "methods": [
+              {
+                "technique": "binary-analysis",
+                "confidence": 0.9,
+                "value": "DLib"
+              }
+            ]
+          },
+          {
+            "field": "version",
+            "confidence": 0.8,
+            "methods": [
+              {
+                "technique": "binary-analysis",
+                "confidence": 0.8,
+                "value": "7.60.1.11206"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": ".ewp GRuntimeLibSelect"
+          }
+        ],
+        "licenses": [
+          {
+            "expression": "LicenseRef-IAR-Proprietary"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "ea33dbf9bcb5f2ba",
+      "type": "file",
+      "name": "../Common/Minimal/comtest.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "32f8cede91fd907a8a32c98f61be037ff4c95d97288e14d3589e570d95bea36c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "comtest.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "../Common/Minimal/comtest.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:32f8cede91fd907a8a32c98f61be037ff4c95d97288e14d3589e570d95bea36c"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "../Common/Minimal/comtest.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    },
+    {
+      "bom-ref": "fba1384e2337d80a",
+      "type": "file",
+      "name": "serial/serial.c",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5fb83c7fabc5ca938e4cf27bfd889b0a68004551fb0ff193edd2f80253e6019f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "copyright": "2020 Amazon.com, Inc. or its affiliates",
+      "properties": [
+        {
+          "name": "bsi:component:archive",
+          "value": "no archive"
+        },
+        {
+          "name": "bsi:component:executable",
+          "value": "non-executable"
+        },
+        {
+          "name": "bsi:component:filename",
+          "value": "serial.c"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "filename",
+                "confidence": 1,
+                "value": "serial/serial.c"
+              }
+            ]
+          },
+          {
+            "field": "hash",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "hash-comparison",
+                "confidence": 1,
+                "value": "SHA-256:5fb83c7fabc5ca938e4cf27bfd889b0a68004551fb0ff193edd2f80253e6019f"
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "location": "serial/serial.c"
+          }
+        ],
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ],
+        "copyright": [
+          {
+            "text": "2020 Amazon.com, Inc. or its affiliates"
+          }
+        ]
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "0174afe52971d0e6",
+      "dependsOn": [
+        "0aed67ece526497e",
+        "1614a3bb102c7b26",
+        "19ae89e692c4de76",
+        "2447f2f6d26d3798",
+        "2e87f905453674ff",
+        "30f20bcf0d8a1267",
+        "3b9821805c359e65",
+        "41dbe4af71d0cc8c",
+        "5e37e5761cd4c9fe",
+        "62ff5e6b2208e159",
+        "69677179d2addfa3",
+        "76bf7dc3da648947",
+        "77c78600cedcd88d",
+        "8b23aefaf4013e7e",
+        "964a3e5031caa220",
+        "a0568ce348356de2",
+        "a6c91140cd96fd14",
+        "a91d0938d990aa74",
+        "abccda0f04b211b4",
+        "b205c5e3cb251347",
+        "b2a4af2ce5d2a178",
+        "bed6d22eb989e060",
+        "c6ff40e4bd1ad0fb",
+        "cfbebeeecd6cbfe8",
+        "d970699fdb2f993b",
+        "dbb7cf511eadb7be",
+        "de9b7e26315dc020",
+        "df1f4d9f67d52628",
+        "dfb0474706df3c7b",
+        "e18d6d1ae58ff30f",
+        "e72cf977a38307e1",
+        "ea33dbf9bcb5f2ba",
+        "fba1384e2337d80a"
+      ]
+    },
+    {
+      "ref": "0aed67ece526497e",
+      "dependsOn": []
+    },
+    {
+      "ref": "1614a3bb102c7b26",
+      "dependsOn": []
+    },
+    {
+      "ref": "19ae89e692c4de76",
+      "dependsOn": []
+    },
+    {
+      "ref": "2447f2f6d26d3798",
+      "dependsOn": []
+    },
+    {
+      "ref": "2e87f905453674ff",
+      "dependsOn": []
+    },
+    {
+      "ref": "30f20bcf0d8a1267",
+      "dependsOn": []
+    },
+    {
+      "ref": "3b9821805c359e65",
+      "dependsOn": []
+    },
+    {
+      "ref": "41dbe4af71d0cc8c",
+      "dependsOn": []
+    },
+    {
+      "ref": "54d4a55c1e58298e",
+      "dependsOn": []
+    },
+    {
+      "ref": "5e37e5761cd4c9fe",
+      "dependsOn": []
+    },
+    {
+      "ref": "62ff5e6b2208e159",
+      "dependsOn": []
+    },
+    {
+      "ref": "69677179d2addfa3",
+      "dependsOn": []
+    },
+    {
+      "ref": "76bf7dc3da648947",
+      "dependsOn": []
+    },
+    {
+      "ref": "77c78600cedcd88d",
+      "dependsOn": []
+    },
+    {
+      "ref": "8b23aefaf4013e7e",
+      "dependsOn": []
+    },
+    {
+      "ref": "964a3e5031caa220",
+      "dependsOn": []
+    },
+    {
+      "ref": "a0568ce348356de2",
+      "dependsOn": []
+    },
+    {
+      "ref": "a6c91140cd96fd14",
+      "dependsOn": []
+    },
+    {
+      "ref": "a91d0938d990aa74",
+      "dependsOn": []
+    },
+    {
+      "ref": "abccda0f04b211b4",
+      "dependsOn": []
+    },
+    {
+      "ref": "ac4491c88038a7ae",
+      "dependsOn": []
+    },
+    {
+      "ref": "b205c5e3cb251347",
+      "dependsOn": []
+    },
+    {
+      "ref": "b2a4af2ce5d2a178",
+      "dependsOn": []
+    },
+    {
+      "ref": "bed6d22eb989e060",
+      "dependsOn": []
+    },
+    {
+      "ref": "c6ff40e4bd1ad0fb",
+      "dependsOn": []
+    },
+    {
+      "ref": "cfbebeeecd6cbfe8",
+      "dependsOn": []
+    },
+    {
+      "ref": "d970699fdb2f993b",
+      "dependsOn": []
+    },
+    {
+      "ref": "dbb7cf511eadb7be",
+      "dependsOn": []
+    },
+    {
+      "ref": "de9b7e26315dc020",
+      "dependsOn": []
+    },
+    {
+      "ref": "df1f4d9f67d52628",
+      "dependsOn": []
+    },
+    {
+      "ref": "dfb0474706df3c7b",
+      "dependsOn": []
+    },
+    {
+      "ref": "e18d6d1ae58ff30f",
+      "dependsOn": []
+    },
+    {
+      "ref": "e72cf977a38307e1",
+      "dependsOn": []
+    },
+    {
+      "ref": "ea33dbf9bcb5f2ba",
+      "dependsOn": []
+    },
+    {
+      "ref": "fba1384e2337d80a",
+      "dependsOn": []
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "incomplete_third_party_only",
+      "assemblies": [
+        "0174afe52971d0e6"
+      ],
+      "dependencies": [
+        "0174afe52971d0e6"
+      ]
+    }
+  ]
+}

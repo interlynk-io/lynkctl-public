@@ -1,0 +1,32 @@
+name: Firmware SBOM
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sbom:
+    runs-on: [self-hosted, linux, lynkctl]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - name: Generate and gate SBOM
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p sbom-output
+          lynkctl version --json > sbom-output/generator.json 2>&1
+          export SOURCE_DATE_EPOCH="$(git show -s --format=%ct HEAD)"
+          lynkctl generate . --provider gnu-make --strict --evidence \
+            --reproducible -o sbom-output/firmware.cdx.json \
+            2> sbom-output/diagnostics.txt
+      - name: Retain SBOM and diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: firmware-sbom
+          path: sbom-output/
+          if-no-files-found: error
+          retention-days: 30
