@@ -1,6 +1,6 @@
-# lynkctl — embedded firmware SBOM generator
+# lynkctl — unified embedded C/C++ & manifest based SBOM generator
 
-Generate CycloneDX SBOMs from C/C++ build evidence and embedded firmware project metadata with Interlynk's lynkctl.
+Generate SBOM in SPDX/CycloneDX for embedded C/C++ and manifest based languages like npm, pythong with evidenence with Interlynk's lynkctl.
 
 **lynkctl is proprietary software.** This public repository contains documentation, CI templates, and a place for reproducible benchmarks. The implementation and binary distribution are managed separately.
 
